@@ -3,7 +3,7 @@ import AccountDropdown from "./AccountDropdown";
 
 const Header = () => {
   return (
-    <div className="bg-blue-300 h-16 flex items-center gap-4 shadow px-6 ">
+    <div className="flex h-16 items-center gap-4 bg-white px-6 shadow">
       <SearchBar />
       <AccountDropdown />
     </div>
