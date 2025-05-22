@@ -1,0 +1,562 @@
+[
+  {
+    "id": 1,
+    "title": "Animales de la Granja",
+    "level": "beginner",
+    "guide": {
+      "name": "Ana",
+      "gender": "female",
+      "country": "Spain"
+    },
+    "topic": "Animals",
+    "duration": 10.92,
+    "published": "2025-01-09",
+    "thumbnailQuery": "farm animal"
+  },
+  {
+    "id": 2,
+    "title": "Viaje a Colombia",
+    "level": "superbeginner",
+    "guide": {
+      "name": "Valeria",
+      "gender": "female",
+      "country": "Chile"
+    },
+    "topic": "Travel",
+    "duration": 19.78,
+    "published": "2025-03-09",
+    "thumbnailQuery": "colombia travel"
+  },
+  {
+    "id": 3,
+    "title": "Hablando de mi Familia",
+    "level": "advanced",
+    "guide": {
+      "name": "Sofía",
+      "gender": "female",
+      "country": "Argentina"
+    },
+    "topic": "Family",
+    "duration": 18.82,
+    "published": "2025-05-15",
+    "thumbnailQuery": "latino family"
+  },
+  {
+    "id": 4,
+    "title": "Los Animales del Bosque",
+    "level": "beginner",
+    "guide": {
+      "name": "Valeria",
+      "gender": "female",
+      "country": "Chile"
+    },
+    "topic": "Animals",
+    "duration": 17.93,
+    "published": "2024-12-02",
+    "thumbnailQuery": "forest animal"
+  },
+  {
+    "id": 5,
+    "title": "Fauna Silvestre del Bosque",
+    "level": "advanced",
+    "guide": {
+      "name": "Luis",
+      "gender": "male",
+      "country": "Mexico"
+    },
+    "topic": "Animals",
+    "duration": 7.63,
+    "published": "2025-01-06",
+    "thumbnailQuery": "wild forest animals"
+  },
+  {
+    "id": 6,
+    "title": "Bailes de Chile",
+    "level": "advanced",
+    "guide": {
+      "name": "Camila",
+      "gender": "female",
+      "country": "Venezuela"
+    },
+    "topic": "General",
+    "duration": 14.75,
+    "published": "2025-05-16",
+    "thumbnailQuery": "chilean dance"
+  },
+  {
+    "id": 7,
+    "title": "¿Dónde Está el Zapato?",
+    "level": "superbeginner",
+    "guide": {
+      "name": "Valeria",
+      "gender": "female",
+      "country": "Chile"
+    },
+    "topic": "General",
+    "duration": 14.72,
+    "published": "2025-01-18",
+    "thumbnailQuery": "children shoes"
+  },
+  {
+    "id": 8,
+    "title": "Mis Comidas Favoritas",
+    "level": "intermediate",
+    "guide": {
+      "name": "Carlos",
+      "gender": "male",
+      "country": "Colombia"
+    },
+    "topic": "Food",
+    "duration": 6.3,
+    "published": "2025-04-22",
+    "thumbnailQuery": "colombian food"
+  },
+  {
+    "id": 9,
+    "title": "Comida Venezolana Tradicional",
+    "level": "superbeginner",
+    "guide": {
+      "name": "Sofía",
+      "gender": "female",
+      "country": "Argentina"
+    },
+    "topic": "Food",
+    "duration": 16.7,
+    "published": "2024-12-08",
+    "thumbnailQuery": "traditional venezuelan food"
+  },
+  {
+    "id": 10,
+    "title": "Comprando en el Mercado",
+    "level": "intermediate",
+    "guide": {
+      "name": "Sofía",
+      "gender": "female",
+      "country": "Argentina"
+    },
+    "topic": "General",
+    "duration": 12.77,
+    "published": "2025-02-12",
+    "thumbnailQuery": "market shopping"
+  },
+  {
+    "id": 11,
+    "title": "Sabores de Venezuela",
+    "level": "advanced",
+    "guide": {
+      "name": "Lucía",
+      "gender": "female",
+      "country": "Cuba"
+    },
+    "topic": "Food",
+    "duration": 7.75,
+    "published": "2025-01-31",
+    "thumbnailQuery": "venezuelan cuisine"
+  },
+  {
+    "id": 12,
+    "title": "Preguntas Comunes",
+    "level": "superbeginner",
+    "guide": {
+      "name": "Luis",
+      "gender": "male",
+      "country": "Mexico"
+    },
+    "topic": "General",
+    "duration": 13.1,
+    "published": "2025-01-31",
+    "thumbnailQuery": "common questions"
+  },
+  {
+    "id": 13,
+    "title": "Jugando en el Parque",
+    "level": "beginner",
+    "guide": {
+      "name": "Ana",
+      "gender": "female",
+      "country": "Spain"
+    },
+    "topic": "General",
+    "duration": 16.2,
+    "published": "2024-11-23",
+    "thumbnailQuery": "kids playing park"
+  },
+  {
+    "id": 14,
+    "title": "La Escuela en Guatemala",
+    "level": "superbeginner",
+    "guide": {
+      "name": "Valeria",
+      "gender": "female",
+      "country": "Chile"
+    },
+    "topic": "School",
+    "duration": 18.2,
+    "published": "2025-01-25",
+    "thumbnailQuery": "guatemala school"
+  },
+  {
+    "id": 15,
+    "title": "La Escuela en Guatemala - Lección Avanzada",
+    "level": "intermediate",
+    "guide": {
+      "name": "Valeria",
+      "gender": "female",
+      "country": "Chile"
+    },
+    "topic": "School",
+    "duration": 18.05,
+    "published": "2025-04-08",
+    "thumbnailQuery": "classroom school"
+  },
+  {
+    "id": 16,
+    "title": "Un Día en México",
+    "level": "superbeginner",
+    "guide": {
+      "name": "Javier",
+      "gender": "male",
+      "country": "Guatemala"
+    },
+    "topic": "Mexico",
+    "duration": 13.75,
+    "published": "2025-02-01",
+    "thumbnailQuery": "mexico daily life"
+  },
+  {
+    "id": 17,
+    "title": "La Rutina Diaria",
+    "level": "superbeginner",
+    "guide": {
+      "name": "Sofía",
+      "gender": "female",
+      "country": "Argentina"
+    },
+    "topic": "General",
+    "duration": 15.98,
+    "published": "2025-04-16",
+    "thumbnailQuery": "daily routine"
+  },
+  {
+    "id": 18,
+    "title": "Los Colores del Arcoíris",
+    "level": "advanced",
+    "guide": {
+      "name": "Carlos",
+      "gender": "male",
+      "country": "Colombia"
+    },
+    "topic": "General",
+    "duration": 19.18,
+    "published": "2025-02-14",
+    "thumbnailQuery": "rainbow colors"
+  },
+  {
+    "id": 19,
+    "title": "Bailes Tradicionales de Chile",
+    "level": "beginner",
+    "guide": {
+      "name": "Sofía",
+      "gender": "female",
+      "country": "Argentina"
+    },
+    "topic": "General",
+    "duration": 18.98,
+    "published": "2025-02-09",
+    "thumbnailQuery": "traditional chilean dance"
+  },
+  {
+    "id": 20,
+    "title": "Colores del Arcoíris Nocturno",
+    "level": "beginner",
+    "guide": {
+      "name": "Camila",
+      "gender": "female",
+      "country": "Venezuela"
+    },
+    "topic": "General",
+    "duration": 14.48,
+    "published": "2025-03-29",
+    "thumbnailQuery": "rainbow colors night"
+  },
+  {
+    "id": 21,
+    "title": "Una Visita al Médico",
+    "level": "intermediate",
+    "guide": {
+      "name": "Sofía",
+      "gender": "female",
+      "country": "Argentina"
+    },
+    "topic": "General",
+    "duration": 9.52,
+    "published": "2025-01-24",
+    "thumbnailQuery": "doctor visit"
+  },
+  {
+    "id": 22,
+    "title": "Bailes de Chile Intermedios",
+    "level": "intermediate",
+    "guide": {
+      "name": "Valeria",
+      "gender": "female",
+      "country": "Chile"
+    },
+    "topic": "General",
+    "duration": 19.22,
+    "published": "2025-02-25",
+    "thumbnailQuery": "chilean dance "
+  },
+  {
+    "id": 23,
+    "title": "La Comida Callejera",
+    "level": "superbeginner",
+    "guide": {
+      "name": "Camila",
+      "gender": "female",
+      "country": "Venezuela"
+    },
+    "topic": "Food",
+    "duration": 5.65,
+    "published": "2025-05-06",
+    "thumbnailQuery": "street food"
+  },
+  {
+    "id": 24,
+    "title": "Comida Venezolana",
+    "level": "superbeginner",
+    "guide": {
+      "name": "Carlos",
+      "gender": "male",
+      "country": "Colombia"
+    },
+    "topic": "Food",
+    "duration": 16.07,
+    "published": "2025-04-25",
+    "thumbnailQuery": "venezuelan food"
+  },
+  {
+    "id": 25,
+    "title": "Diversion en el Parque",
+    "level": "superbeginner",
+    "guide": {
+      "name": "Ana",
+      "gender": "female",
+      "country": "Spain"
+    },
+    "topic": "General",
+    "duration": 12.12,
+    "published": "2024-12-02",
+    "thumbnailQuery": "fun park kids"
+  },
+  {
+    "id": 26,
+    "title": "¿Cómo Me Siento Hoy?",
+    "level": "advanced",
+    "guide": {
+      "name": "Sofía",
+      "gender": "female",
+      "country": "Argentina"
+    },
+    "topic": "General",
+    "duration": 7.95,
+    "published": "2025-04-20",
+    "thumbnailQuery": "feeling emotions"
+  },
+  {
+    "id": 27,
+    "title": "Mi Rutina Diaria",
+    "level": "intermediate",
+    "guide": {
+      "name": "Camila",
+      "gender": "female",
+      "country": "Venezuela"
+    },
+    "topic": "General",
+    "duration": 9.55,
+    "published": "2025-03-15",
+    "thumbnailQuery": "my daily routine"
+  },
+  {
+    "id": 28,
+    "title": "Preguntas Frecuentes",
+    "level": "intermediate",
+    "guide": {
+      "name": "Ana",
+      "gender": "female",
+      "country": "Spain"
+    },
+    "topic": "General",
+    "duration": 18.78,
+    "published": "2025-03-08",
+    "thumbnailQuery": "frequent questions"
+  },
+  {
+    "id": 29,
+    "title": "Comidas que Me Gustan",
+    "level": "beginner",
+    "guide": {
+      "name": "Javier",
+      "gender": "male",
+      "country": "Guatemala"
+    },
+    "topic": "Food",
+    "duration": 7.82,
+    "published": "2025-04-25",
+    "thumbnailQuery": "favorite meals"
+  },
+  {
+    "id": 30,
+    "title": "Rutina Diaria Fácil",
+    "level": "superbeginner",
+    "guide": {
+      "name": "Sofía",
+      "gender": "female",
+      "country": "Argentina"
+    },
+    "topic": "General",
+    "duration": 14.62,
+    "published": "2025-05-14",
+    "thumbnailQuery": "easy daily routine"
+  },
+  {
+    "id": 31,
+    "title": "Mi Ciudad Favorita",
+    "level": "superbeginner",
+    "guide": {
+      "name": "Valeria",
+      "gender": "female",
+      "country": "Chile"
+    },
+    "topic": "General",
+    "duration": 12.85,
+    "published": "2025-04-30",
+    "thumbnailQuery": "favorite city"
+  },
+  {
+    "id": 32,
+    "title": "¿Buscando el Zapato?",
+    "level": "superbeginner",
+    "guide": {
+      "name": "Lucía",
+      "gender": "female",
+      "country": "Cuba"
+    },
+    "topic": "General",
+    "duration": 19.2,
+    "published": "2025-03-03",
+    "thumbnailQuery": "searching shoe kids"
+  },
+  {
+    "id": 33,
+    "title": "La Cultura Cubana",
+    "level": "beginner",
+    "guide": {
+      "name": "Lucía",
+      "gender": "female",
+      "country": "Cuba"
+    },
+    "topic": "Culture",
+    "duration": 16.75,
+    "published": "2025-03-28",
+    "thumbnailQuery": "cuban culture"
+  },
+  {
+    "id": 34,
+    "title": "Ciudad que Amo",
+    "level": "intermediate",
+    "guide": {
+      "name": "Javier",
+      "gender": "male",
+      "country": "Guatemala"
+    },
+    "topic": "General",
+    "duration": 16.58,
+    "published": "2025-01-09",
+    "thumbnailQuery": "beloved city"
+  },
+  {
+    "id": 35,
+    "title": "Cosas en la Cocina",
+    "level": "intermediate",
+    "guide": {
+      "name": "Javier",
+      "gender": "male",
+      "country": "Guatemala"
+    },
+    "topic": "General",
+    "duration": 18.02,
+    "published": "2025-02-26",
+    "thumbnailQuery": "kitchen items"
+  },
+  {
+    "id": 36,
+    "title": "¿Qué Hay en Mi Mochila?",
+    "level": "superbeginner",
+    "guide": {
+      "name": "Javier",
+      "gender": "male",
+      "country": "Guatemala"
+    },
+    "topic": "General",
+    "duration": 18.13,
+    "published": "2025-01-28",
+    "thumbnailQuery": "school backpack"
+  },
+  {
+    "id": 37,
+    "title": "La Vida de un Gato",
+    "level": "beginner",
+    "guide": {
+      "name": "Diego",
+      "gender": "male",
+      "country": "Peru"
+    },
+    "topic": "General",
+    "duration": 14.65,
+    "published": "2025-01-01",
+    "thumbnailQuery": "cat life"
+  },
+  {
+    "id": 38,
+    "title": "Tradiciones Cubanas",
+    "level": "advanced",
+    "guide": {
+      "name": "Carlos",
+      "gender": "male",
+      "country": "Colombia"
+    },
+    "topic": "Culture",
+    "duration": 10.88,
+    "published": "2025-05-12",
+    "thumbnailQuery": "cuban traditions"
+  },
+  {
+    "id": 39,
+    "title": "¿Contenido de Mi Mochila?",
+    "level": "superbeginner",
+    "guide": {
+      "name": "Sofía",
+      "gender": "female",
+      "country": "Argentina"
+    },
+    "topic": "General",
+    "duration": 15.22,
+    "published": "2024-12-14",
+    "thumbnailQuery": "school backpack"
+  },
+  {
+    "id": 40,
+    "title": "Tradiciones de Argentina",
+    "level": "intermediate",
+    "guide": {
+      "name": "Lucía",
+      "gender": "female",
+      "country": "Cuba"
+    },
+    "topic": "General",
+    "duration": 16.78,
+    "published": "2025-04-11",
+    "thumbnailQuery": "argentina traditions"
+  }
+]
