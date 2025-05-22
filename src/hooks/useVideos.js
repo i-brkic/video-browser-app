@@ -7,6 +7,8 @@ const useVideos = () => {
 
   const [error, setError] = useState(null);
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -41,12 +43,14 @@ const useVideos = () => {
             thumbnailUrl: "/error.jpg",
           })),
         );
+      } finally {
+        setLoading(false);
       }
     };
     fetchData();
   }, []);
 
-  return { videos, error };
+  return { videos, error, loading };
 };
 
 export default useVideos;
