@@ -1,7 +1,6 @@
 import Sidebar from "./components/Sidebar/Sidebar";
 import Header from "./components/Header/Header";
 import VideoGrid from "./components/VideoGrid/VideoGrid";
-import VideoTest from "./components/VideoGrid/VideoTest";
 
 function App() {
   return (
@@ -10,9 +9,8 @@ function App() {
         <Sidebar />
 
         <div className="flex flex-1 flex-col">
-          {/* <Header />
-          <VideoGrid /> */}
-          <VideoTest />
+          <Header />
+          <VideoGrid />
         </div>
       </div>
     </div>

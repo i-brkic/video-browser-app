@@ -7,7 +7,7 @@ import { Sparkles } from "lucide-react";
 
 const Sidebar = () => {
   return (
-    <div className="flex h-screen w-64 flex-col items-start gap-8 bg-white p-4 shadow">
+    <div className="hidden h-screen w-64 flex-col items-start gap-8 bg-white p-4 shadow lg:flex">
       <Logo />
 
       <div className="flex items-center gap-4 pl-4">

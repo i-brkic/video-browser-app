@@ -2,6 +2,11 @@
 
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-sm: 35rem;
+  --breakpoint-lg: 57rem;
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
