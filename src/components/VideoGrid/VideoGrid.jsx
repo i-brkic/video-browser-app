@@ -20,7 +20,7 @@ const VideoGrid = () => {
   return (
     <div className="flex flex-1 flex-col gap-4 overflow-y-auto bg-gray-100 p-6 pb-0">
       <FilterBar />
-      <div className="grid grid-cols-1 gap-6 rounded-md bg-gray-100 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="side:grid-cols-3 grid4:grid-cols-4 grid2:grid-cols-2 grid grid-cols-1 gap-6 rounded-md bg-gray-100">
         {videos.map((video) => {
           return <VideoCard key={video.id} video={video} />;
         })}

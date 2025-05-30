@@ -3,8 +3,17 @@
 @import "tailwindcss";
 
 @theme {
-  --breakpoint-sm: 35rem;
-  --breakpoint-lg: 57rem;
+  --breakpoint-side: 62rem;
+  --breakpoint-sideh: 62rem;
+  --breakpoint-grid4: 75rem;
+  --breakpoint-grid2: 36rem;
+  --breakpoint-filter3: 36rem;
+  --breakpoint-filter4: 42rem;
+  --breakpoint-filter5: 50rem;
+  --breakpoint-filter6: 58rem;
+  --breakpoint-filter55: 66rem;
+  --breakpoint-filter66: 74rem;
+  --breakpoint-filterF: 80rem;
 }
 
 body {
