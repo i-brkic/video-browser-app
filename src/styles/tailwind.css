@@ -14,6 +14,7 @@
   --breakpoint-filter55: 66rem;
   --breakpoint-filter66: 74rem;
   --breakpoint-filterF: 80rem;
+  --color-filterBar: #fefefe;
 }
 
 body {
