@@ -1,4 +1,5 @@
 import FilterBar from "./FilterBar";
+import ReducedFilterBar from "./ReducedFilterBar";
 import useVideos from "../../hooks/useVideos";
 import VideoCard from "./VideoCard";
 
@@ -19,7 +20,14 @@ const VideoGrid = () => {
 
   return (
     <div className="flex flex-1 flex-col gap-4 overflow-y-auto bg-gray-100 p-6 pb-0">
-      <FilterBar />
+      <div className="filter3:block hidden">
+        <FilterBar />
+      </div>
+
+      <div className="filter3:hidden -mx-6 -mt-6 block">
+        <ReducedFilterBar />
+      </div>
+
       <div className="side:grid-cols-3 grid4:grid-cols-4 grid2:grid-cols-2 grid grid-cols-1 gap-6 rounded-md bg-gray-100">
         {videos.map((video) => {
           return <VideoCard key={video.id} video={video} />;

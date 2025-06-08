@@ -12,7 +12,7 @@ const FilterBar = () => {
   const [openDropdown, setOpenDropdown] = useState("");
 
   return (
-    <div className="filter6:grid-cols-6 filter3:grid-cols-3 filter4:grid-cols-4 filter5:grid-cols-5 side:grid-cols-4 filter55:grid-cols-5 filter66:grid-cols-6 filterF:grid-cols-7 bg-filterBar grid h-14 w-full gap-3 rounded-md px-3 py-3 shadow-sm">
+    <div className="filter6:grid-cols-6 filter3:grid-cols-3 filter4:grid-cols-4 filter5:grid-cols-5 side:grid-cols-4 filter55:grid-cols-5 filter66:grid-cols-6 filterF:grid-cols-7 bg-filterBar filter3:grid hidden h-14 w-full gap-3 rounded-md px-3 py-3 shadow-sm">
       <div className="filter3:block relative hidden">
         <FilterButton
           icon={<ChartColumnIncreasing className="h-4 w-4 text-slate-600" />}

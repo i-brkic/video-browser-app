@@ -4,7 +4,7 @@ import AccountDropdown from "./AccountDropdown";
 
 const Header = () => {
   return (
-    <div className="flex h-16 items-center gap-3 bg-white pl-6 shadow">
+    <div className="side:flex-row side:pl-6 side:h-16 flex h-19 flex-col items-center gap-3 bg-white shadow">
       <SearchBar />
       <LogInSignUp />
       <AccountDropdown />
