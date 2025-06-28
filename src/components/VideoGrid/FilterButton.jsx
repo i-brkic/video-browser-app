@@ -5,8 +5,8 @@ const FilterButton = ({ icon, label, isOpen, onClick }) => {
     <button
       className={
         isOpen
-          ? "flex w-full items-center justify-between rounded-md border border-orange-300 bg-slate-100 p-2 py-1 text-sm font-semibold tracking-wide transition-colors duration-300"
-          : "flex w-full items-center justify-between rounded-md border border-transparent bg-slate-100 p-2 py-1 text-sm font-semibold tracking-wide transition-colors duration-300 hover:border-orange-300"
+          ? "flex w-full items-center justify-between rounded-lg border border-orange-300 bg-slate-100 p-2 py-1 text-sm font-semibold tracking-wide transition-colors duration-300"
+          : "flex w-full items-center justify-between rounded-lg border border-transparent bg-slate-100 p-2 py-1 text-sm font-semibold tracking-wide transition-colors duration-300 hover:border-orange-300"
       }
       onClick={onClick}
     >
