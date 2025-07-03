@@ -55,7 +55,7 @@ const MoreFilter = ({
     <div ref={outerRef}>
       <div
         className={
-          `filter4:h-35 filter5:h-24 filter6:h-14 side:h-35 filter55:h-24 filter66:h-14 filterF:hidden absolute top-full right-0 flex w-50 flex-col rounded-md border border-slate-100 bg-white shadow-md ` +
+          `filter4:h-34 filter5:h-24 filter6:h-14 side:h-35 filter55:h-24 filter66:h-14 filterF:hidden absolute top-full right-0 flex w-50 flex-col rounded-md border border-slate-100 bg-white shadow-md ` +
           (openInnerDropdown === "" ? "h-45 gap-3 p-3" : "gap-0 p-0")
         }
       >

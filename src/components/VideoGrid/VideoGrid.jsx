@@ -1,10 +1,76 @@
+import { useState } from "react";
 import FilterBar from "./FilterBar";
 import ReducedFilterBar from "./ReducedFilterBar";
 import useVideos from "../../hooks/useVideos";
 import VideoCard from "./VideoCard";
+import MobileFilterMenu from "./MobileFilterMenu";
+
+const levelOrder = ["superbeginner", "beginner", "intermediate", "advanced"];
 
 const VideoGrid = () => {
   const { videos, error, loading } = useVideos();
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+
+  const [checkedLevels, setCheckedLevels] = useState([]);
+  const [checkedGuides, setCheckedGuides] = useState([]);
+  const [checkedCountries, setCheckedCountries] = useState([]);
+  const [checkedGenders, setCheckedGenders] = useState([]);
+  const [checkedDurations, setCheckedDurations] = useState([]);
+  const [checkedTopics, setCheckedTopics] = useState([]);
+
+  const levels = Array.from(new Set(videos.map((video) => video.level))).sort(
+    (a, b) => levelOrder.indexOf(a) - levelOrder.indexOf(b),
+  );
+  const guidesName = Array.from(
+    new Set(videos.map((video) => video.guide.name)),
+  ).sort((a, b) => a.localeCompare(b));
+  const guidesCountries = Array.from(
+    new Set(videos.map((video) => video.guide.country)),
+  ).sort((a, b) => a.localeCompare(b));
+  const guidesGenders = Array.from(
+    new Set(videos.map((video) => video.guide.gender)),
+  ).sort((a, b) => a.localeCompare(b));
+  const durationBreakpoints = [10, 15, 20];
+  const topics = Array.from(new Set(videos.map((video) => video.topic))).sort(
+    (a, b) => a.localeCompare(b),
+  );
+
+  const handleLevelClick = (level) => {
+    setCheckedLevels((prev) =>
+      prev.includes(level) ? prev.filter((l) => l !== level) : [...prev, level],
+    );
+  };
+  const handleGuideClick = (guide) => {
+    setCheckedGuides((prev) =>
+      prev.includes(guide) ? prev.filter((g) => g !== guide) : [...prev, guide],
+    );
+  };
+  const handleCountryClick = (country) => {
+    setCheckedCountries((prev) =>
+      prev.includes(country)
+        ? prev.filter((c) => c !== country)
+        : [...prev, country],
+    );
+  };
+  const handleGenderClick = (gender) => {
+    setCheckedGenders((prev) =>
+      prev.includes(gender)
+        ? prev.filter((g) => g !== gender)
+        : [...prev, gender],
+    );
+  };
+  const handleDurationClick = (duration) => {
+    setCheckedDurations((prev) =>
+      prev.includes(duration)
+        ? prev.filter((d) => d !== duration)
+        : [...prev, duration],
+    );
+  };
+  const handleTopicClick = (topic) => {
+    setCheckedTopics((prev) =>
+      prev.includes(topic) ? prev.filter((t) => t !== topic) : [...prev, topic],
+    );
+  };
 
   if (loading) {
     return <div className="p-6 text-blue-500">Loading...</div>;
@@ -21,11 +87,54 @@ const VideoGrid = () => {
   return (
     <div className="flex flex-1 flex-col gap-4 overflow-y-auto bg-gray-100 p-6 pb-0">
       <div className="filter3:block hidden">
-        <FilterBar />
+        <FilterBar
+          levels={levels}
+          checkedLevels={checkedLevels}
+          handleLevelClick={handleLevelClick}
+          guidesName={guidesName}
+          checkedGuides={checkedGuides}
+          handleGuideClick={handleGuideClick}
+          guidesCountries={guidesCountries}
+          checkedCountries={checkedCountries}
+          handleCountryClick={handleCountryClick}
+          guidesGenders={guidesGenders}
+          checkedGenders={checkedGenders}
+          handleGenderClick={handleGenderClick}
+          durationBreakpoints={durationBreakpoints}
+          checkedDurations={checkedDurations}
+          handleDurationClick={handleDurationClick}
+          topics={topics}
+          checkedTopics={checkedTopics}
+          handleTopicClick={handleTopicClick}
+        />
       </div>
 
       <div className="filter3:hidden -mx-6 -mt-6 block">
-        <ReducedFilterBar />
+        <ReducedFilterBar
+          onOpenFilterMenu={() => setIsMobileFilterOpen(true)}
+        />
+        <MobileFilterMenu
+          open={isMobileFilterOpen}
+          onClose={() => setIsMobileFilterOpen(false)}
+          levels={levels}
+          checkedLevels={checkedLevels}
+          handleLevelClick={handleLevelClick}
+          guidesName={guidesName}
+          checkedGuides={checkedGuides}
+          handleGuideClick={handleGuideClick}
+          guidesCountries={guidesCountries}
+          checkedCountries={checkedCountries}
+          handleCountryClick={handleCountryClick}
+          guidesGenders={guidesGenders}
+          checkedGenders={checkedGenders}
+          handleGenderClick={handleGenderClick}
+          durationBreakpoints={durationBreakpoints}
+          checkedDurations={checkedDurations}
+          handleDurationClick={handleDurationClick}
+          topics={topics}
+          checkedTopics={checkedTopics}
+          handleTopicClick={handleTopicClick}
+        />
       </div>
 
       <div className="side:grid-cols-3 grid4:grid-cols-4 grid2:grid-cols-2 grid grid-cols-1 gap-6 rounded-md bg-gray-100">

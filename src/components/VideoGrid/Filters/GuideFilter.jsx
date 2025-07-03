@@ -7,35 +7,41 @@ const GuideFilter = ({
   guidesName,
   checkedGuides,
   handleGuideClick,
+  noAbsolute = false,
 }) => {
-  const ref = useClickOutside(openDropdown === "guide", () =>
-    setOpenDropdown(""),
-  );
+  const ref = !noAbsolute
+    ? useClickOutside(openDropdown === "guide", () => setOpenDropdown(""))
+    : undefined;
+
   if (openDropdown !== "guide") return null;
 
   return (
     <div ref={ref}>
-      <div className="absolute top-full h-53 w-60 overflow-auto rounded-md border border-slate-100 bg-white shadow-md">
+      <div
+        className={`${
+          noAbsolute
+            ? "static w-full max-w-full border-0"
+            : "absolute top-full w-60 overflow-auto bg-white shadow-md"
+        } h-53 rounded-md border-slate-100`}
+      >
         <span className="mb-2 block pt-3 pl-3">Include</span>
         <div className="flex flex-col">
-          {guidesName.map((name) => {
-            return (
-              <label
-                key={name}
-                className="flex items-center gap-3 p-2 pl-3 text-sm font-semibold hover:bg-slate-100"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleGuideClick(name);
-                }}
-              >
-                <CustomCheckbox
-                  checked={checkedGuides.includes(name)}
-                  value={name}
-                />
-                {name}
-              </label>
-            );
-          })}
+          {guidesName.map((name) => (
+            <label
+              key={name}
+              className="flex items-center gap-3 p-2 pl-3 text-sm font-semibold hover:bg-slate-100"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleGuideClick(name);
+              }}
+            >
+              <CustomCheckbox
+                checked={checkedGuides.includes(name)}
+                value={name}
+              />
+              {name}
+            </label>
+          ))}
         </div>
       </div>
     </div>
