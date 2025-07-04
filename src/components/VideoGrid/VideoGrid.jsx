@@ -84,6 +84,43 @@ const VideoGrid = () => {
     return <div className="p-6 text-gray-500">no videos found.</div>;
   }
 
+  const filteredVideos = videos.filter((video) => {
+    if (checkedLevels.length > 0 && !checkedLevels.includes(video.level)) {
+      return false;
+    }
+
+    if (checkedGuides.length > 0 && !checkedGuides.includes(video.guide.name)) {
+      return false;
+    }
+
+    if (
+      checkedCountries.length > 0 &&
+      !checkedCountries.includes(video.guide.country)
+    ) {
+      return false;
+    }
+
+    if (
+      checkedGenders.length > 0 &&
+      !checkedGenders.includes(video.guide.gender)
+    ) {
+      return false;
+    }
+
+    if (
+      checkedDurations.length > 0 &&
+      !checkedDurations.some((breakpoint) => video.duration < breakpoint)
+    ) {
+      return false;
+    }
+
+    if (checkedTopics.length > 0 && !checkedTopics.includes(video.topic)) {
+      return false;
+    }
+
+    return true;
+  });
+
   return (
     <div className="flex flex-1 flex-col gap-4 overflow-y-auto bg-gray-100 p-6 pb-0">
       <div className="filter3:block hidden">
@@ -138,7 +175,7 @@ const VideoGrid = () => {
       </div>
 
       <div className="side:grid-cols-3 grid4:grid-cols-4 grid2:grid-cols-2 grid grid-cols-1 gap-6 rounded-md bg-gray-100">
-        {videos.map((video) => {
+        {filteredVideos.map((video) => {
           return <VideoCard key={video.id} video={video} />;
         })}
       </div>

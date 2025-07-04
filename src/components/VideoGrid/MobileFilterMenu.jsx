@@ -47,6 +47,11 @@ const MobileFilterMenu = ({
 }) => {
   const [activePanel, setActivePanel] = useState(null);
 
+  const handleViewVideos = () => {
+    setActivePanel(null);
+    onClose();
+  };
+
   return (
     <div
       className={`fixed top-0 right-0 z-50 h-full w-full bg-white transition-transform duration-300 ${open ? "translate-x-0" : "translate-x-full"}`}
@@ -88,7 +93,10 @@ const MobileFilterMenu = ({
           })}
         </div>
         <div className="bg fixed bottom-0 z-55 h-18 w-full bg-gray-100 p-4 shadow-lg">
-          <button className="p w-full cursor-pointer rounded-lg bg-amber-500 py-2 text-white">
+          <button
+            className="p w-full cursor-pointer rounded-lg bg-amber-500 py-2 text-white"
+            onClick={handleViewVideos}
+          >
             View Videos
           </button>
         </div>
@@ -172,7 +180,10 @@ const MobileFilterMenu = ({
         </div>
 
         <div className="fixed bottom-0 left-0 z-70 w-full bg-gray-100 p-4 shadow-lg">
-          <button className="w-full cursor-pointer rounded-lg bg-amber-500 py-2 text-white">
+          <button
+            className="w-full cursor-pointer rounded-lg bg-amber-500 py-2 text-white"
+            onClick={handleViewVideos}
+          >
             View Videos
           </button>
         </div>
