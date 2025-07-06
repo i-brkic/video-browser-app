@@ -34,6 +34,7 @@ const FilterBar = ({
   topics,
   checkedTopics,
   handleTopicClick,
+  checkedSign,
 }) => {
   const [openDropdown, setOpenDropdown] = useState("");
 
@@ -42,7 +43,12 @@ const FilterBar = ({
       <div className="filter3:block relative hidden">
         <FilterButton
           icon={<ChartColumnIncreasing className="h-4 w-4 text-slate-600" />}
-          label="Level"
+          label={
+            <>
+              Level
+              {checkedLevels.length > 0 && checkedSign}
+            </>
+          }
           onClick={(e) => {
             e.stopPropagation();
             setOpenDropdown(openDropdown === "level" ? "" : "level");
@@ -62,7 +68,12 @@ const FilterBar = ({
       <div className="filter3:block relative hidden">
         <FilterButton
           icon={<UserRound className="h-4 w-4 text-slate-600" />}
-          label="Guide"
+          label={
+            <>
+              Guide
+              {checkedGuides.length > 0 && checkedSign}
+            </>
+          }
           onClick={(e) => {
             e.stopPropagation();
             setOpenDropdown(openDropdown === "guide" ? "" : "guide");
@@ -82,7 +93,12 @@ const FilterBar = ({
       <div className="filter4:block relative hidden">
         <FilterButton
           icon={<MapPin className="h-4 w-4 text-slate-600" />}
-          label="Country"
+          label={
+            <>
+              Country
+              {checkedCountries.length > 0 && checkedSign}
+            </>
+          }
           onClick={(e) => {
             e.stopPropagation();
             setOpenDropdown(openDropdown === "country" ? "" : "country");
@@ -102,7 +118,12 @@ const FilterBar = ({
       <div className="filter5:block side:hidden filter55:block relative hidden">
         <FilterButton
           icon={<VenusAndMars className="h-4 w-4 text-slate-600" />}
-          label="Gender"
+          label={
+            <>
+              Gender
+              {checkedGenders.length > 0 && checkedSign}
+            </>
+          }
           onClick={(e) => {
             e.stopPropagation();
             setOpenDropdown(openDropdown === "gender" ? "" : "gender");
@@ -122,7 +143,12 @@ const FilterBar = ({
       <div className="filter6:block side:hidden filter66:block relative hidden">
         <FilterButton
           icon={<Timer className="h-4 w-4 text-slate-600" />}
-          label="Duration"
+          label={
+            <>
+              Duration
+              {checkedDurations.length > 0 && checkedSign}
+            </>
+          }
           onClick={(e) => {
             e.stopPropagation();
             setOpenDropdown(openDropdown === "duration" ? "" : "duration");
@@ -142,7 +168,12 @@ const FilterBar = ({
       <div className="filterF:block relative hidden">
         <FilterButton
           icon={<SwatchBook className="h-4 w-4 text-slate-600" />}
-          label="Topic"
+          label={
+            <>
+              Topic
+              {checkedTopics.length > 0 && checkedSign}
+            </>
+          }
           onClick={(e) => {
             e.stopPropagation();
             setOpenDropdown(openDropdown === "topic" ? "" : "topic");

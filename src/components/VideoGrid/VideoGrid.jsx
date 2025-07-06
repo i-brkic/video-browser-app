@@ -18,6 +18,14 @@ const VideoGrid = () => {
   const [checkedDurations, setCheckedDurations] = useState([]);
   const [checkedTopics, setCheckedTopics] = useState([]);
 
+  const checkedSign = (
+    <div className="absolute -top-1 right-0 h-3 w-3 rounded-full bg-orange-400" />
+  );
+
+  const checkedSignMobile = (
+    <div className="absolute -top-1 -left-3 h-2 w-2 rounded-full bg-orange-400" />
+  );
+
   const levels = Array.from(new Set(videos.map((video) => video.level))).sort(
     (a, b) => levelOrder.indexOf(a) - levelOrder.indexOf(b),
   );
@@ -143,6 +151,7 @@ const VideoGrid = () => {
           topics={topics}
           checkedTopics={checkedTopics}
           handleTopicClick={handleTopicClick}
+          checkedSign={checkedSign}
         />
       </div>
 
@@ -171,14 +180,21 @@ const VideoGrid = () => {
           topics={topics}
           checkedTopics={checkedTopics}
           handleTopicClick={handleTopicClick}
+          checkedSignMobile={checkedSignMobile}
         />
       </div>
 
-      <div className="side:grid-cols-3 grid4:grid-cols-4 grid2:grid-cols-2 grid grid-cols-1 gap-6 rounded-md bg-gray-100">
+      <div className="side:grid-cols-3 grid4:grid-cols-4 grid2:grid-cols-2 grid min-h-[25vh] grid-cols-1 gap-6 rounded-md bg-gray-100">
         {filteredVideos.map((video) => {
           return <VideoCard key={video.id} video={video} />;
         })}
       </div>
+
+      {filteredVideos.length === 0 && (
+        <div className="mx-auto flex h-10 w-110 items-center justify-center rounded-lg bg-slate-300 p-20 text-2xl font-semibold tracking-wider">
+          No matching videos!
+        </div>
+      )}
     </div>
   );
 };

@@ -21,7 +21,7 @@ const TopicFilter = ({
       <div
         className={`${
           noAbsolute
-            ? "static w-full max-w-full border-0"
+            ? "static h-53 w-full max-w-full overflow-y-auto border-0"
             : `absolute top-full ${dropdownWidth ? dropdownWidth : "w-60"} overflow-auto bg-white shadow-md`
         } h-53 rounded-md border-slate-100`}
       >

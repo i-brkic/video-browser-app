@@ -44,6 +44,7 @@ const MobileFilterMenu = ({
   topics,
   checkedTopics,
   handleTopicClick,
+  checkedSignMobile,
 }) => {
   const [activePanel, setActivePanel] = useState(null);
 
@@ -71,18 +72,26 @@ const MobileFilterMenu = ({
         <div className="flex flex-col p-6 pt-0">
           {FILTERS.map((filter) => {
             const Icon = filter.icon;
+            let isChecked = false;
+            if (filter.key === "level") isChecked = checkedLevels.length > 0;
+            if (filter.key === "guide") isChecked = checkedGuides.length > 0;
+            if (filter.key === "country")
+              isChecked = checkedCountries.length > 0;
+            if (filter.key === "gender") isChecked = checkedGenders.length > 0;
+            if (filter.key === "duration")
+              isChecked = checkedDurations.length > 0;
+            if (filter.key === "topic") isChecked = checkedTopics.length > 0;
+
             return (
               <button
                 key={filter.key}
                 className="relative -mx-6 flex items-center justify-between px-6 py-5 transition-colors duration-300 hover:bg-slate-100"
-                onClick={() => {
-                  console.log("Clicked:", filter.key);
-                  setActivePanel(filter.key);
-                }}
+                onClick={() => setActivePanel(filter.key)}
               >
-                <div className="flex items-center gap-3">
+                <div className="relative flex items-center gap-3">
                   <Icon className="h-5 w-5 text-black" />
                   <div>{filter.label}</div>
+                  {isChecked && checkedSignMobile}
                 </div>
                 <div>
                   <ChevronRight className="h-6 w-6 text-black" />
