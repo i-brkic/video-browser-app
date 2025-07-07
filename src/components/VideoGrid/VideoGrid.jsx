@@ -7,7 +7,7 @@ import MobileFilterMenu from "./MobileFilterMenu";
 
 const levelOrder = ["superbeginner", "beginner", "intermediate", "advanced"];
 
-const VideoGrid = () => {
+const VideoGrid = ({ querry }) => {
   const { videos, error, loading } = useVideos();
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
@@ -93,6 +93,10 @@ const VideoGrid = () => {
   }
 
   const filteredVideos = videos.filter((video) => {
+    if (querry && !video.title.toLowerCase().includes(querry.toLowerCase())) {
+      return false;
+    }
+
     if (checkedLevels.length > 0 && !checkedLevels.includes(video.level)) {
       return false;
     }
